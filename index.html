@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GCEK Hackathon 2022</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="images/gcek-logo.png" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      var deadline = new Date("mar 10, 2022 23:59:59").getTime();
+
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var t = deadline - now;
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((t % (1000 * 60)) / 1000);
+        document.getElementById("day").innerHTML = days;
+        document.getElementById("hour").innerHTML = hours;
+        document.getElementById("minute").innerHTML = minutes;
+        document.getElementById("second").innerHTML = seconds;
+        if (t < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML =
+            "Team Registration Closed";
+          document.getElementById("day").innerHTML = "0";
+          document.getElementById("hour").innerHTML = "0";
+          document.getElementById("minute").innerHTML = "0";
+          document.getElementById("second").innerHTML = "0";
+        }
+      }, 1000);
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand active" id="titleforhead" href="/index.html"
+            >GCEK Hackathon</a
+          >
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/index.html" class="selected">Home</a></li>
+          <li><a href="/meetourteam.html">Meet Our Team</a></li>
+          <li>
+            <a href="https://www.sih.gov.in/sih2022PS" target="_blank">
+              Problem Statements
+            </a>
+          </li>
+          <li><a href="/gallery.html"> Gallary </a></li>
+          <li><a href="/announcements.html">Announcements</a></li>
+        </ul>
+        <div>
+          <marquee
+            ><a
+              href="https://forms.gle/sUSGsiwMG1HLpGPd9"
+              style="
+                text-decoration: none;
+                font-size: medium;
+                color: rgb(210, 243, 243);
+              "
+              target="_blank"
+              >Submission of a SIH PPT Presentation will be closed on 10 Mar 2022.
+              click here to submit PPT Presentation... See Announcements Section for PPT Demo.</a
+            >
+            <a href="/files/SIH Sample PPT.pptx" download 
+            style="
+            text-decoration: none;
+            font-size: medium;
+            color: rgb(29, 230, 186);
+          "> Click here to Download PPT Demo</a>
+            </marquee
+          >
+
+          
+        </div>
+      </div>
+    </nav>
+
+    <!--
+
+  Actual Body
+-->
+    <main class="main-section">
+      <div class="container" style="text-align: center">
+        <h1 id="heading">GCEK HACKATHON</h1>
+        <h2 id="subtitle" style="font-weight: 700;">
+          Solve real-world industry problems using hands-on engineering design
+        </h2>
+        <h2 id="subtitle2">Proudly presented by GCE Karad</h2>
+        <br />
+        <h3 id="demo" style="font-weight: bold;">Submission Of SIH PPT Presentation will be closed on</h3>
+        <div id="clockdiv">
+          <div>
+            <span class="days" id="day"></span>
+            <div class="smalltext">Days</div>
+          </div>
+          <div>
+            <span class="hours" id="hour"></span>
+            <div class="smalltext">Hours</div>
+          </div>
+          <div>
+            <span class="minutes" id="minute"></span>
+            <div class="smalltext">Minutes</div>
+          </div>
+          <div>
+            <span class="seconds" id="second"></span>
+            <div class="smalltext">Seconds</div>
+          </div>
+        </div>
+      </div>
+
+      <p
+        style="
+          text-shadow: 1px #fff;
+          margin: 20px;
+          font-size: 4vw;
+          text-align: center;
+          border-radius: 50px;
+          opacity: 0.4;
+        "
+      >
+        . . . . .
+      </p>
+      <!--
+        Image section
+      -->
+      <div style="margin-top: 10px">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card-body sihimg">
+              <img src="images/sih-image.png" alt="SIH Logo" />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title about-sih">About SIH</h2>
+                <p class="card-text description">
+                  Smart India Hackathon 2022 is a nationwide initiative to
+                  provide students a platform to solve some of the pressing
+                  problems we face in our daily lives, and thus inculcate a
+                  culture of product innovation and a mindset of problem
+                  solving.The last edition of the hackathon saw over 5 million+
+                  students from various colleges compete for the top prize at
+                  65+ locations.In SIH 2022, the students would have the
+                  opportunity to work on challenges faced within various
+                  Ministries, Departments, Industries, PSUs and NGOs to create
+                  world class solutions for some of the top organizations
+                  including industries in the world, thus helping the Private
+                  sector hire the best minds from across the nation.
+                </p>
+                <a href="https://sih.gov.in/" class="btn btn-primary viewsih"
+                  >Visit SIH website</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--
+        Steps of SIH hackathon 
+      -->
+      <p
+        style="
+          text-shadow: 1px #fff;
+          font-size: 4vw;
+          text-align: center;
+          border-radius: 50px;
+          opacity: 0.4;
+        "
+      >
+        . . . . .
+      </p>
+
+      <!--
+        Image of Stpes of SIH
+      -->
+      <!-- <h2 id="process-header">Process Of SIH Hackathon</h2> -->
+      <!-- <div style="text-align: center; margin-bottom: 20px"> -->
+        <!-- <img
+          src="images/actual-steps.png"
+          class="img-fluid"
+          alt="Steps of SIH Hackathon" -->
+      
+      <!-- </div> -->
+      <!-- <div class="text-center">
+        <img src="images/actual-steps.png" class="rounded" alt="Steps of SIH" style="border-radius: 20px;margin-top: 15px;" />
+      </div>
+
+
+      <img src="images/steps_of_sih.png" class="img-fluid" alt="Responsive image"> -->
+    </main>
+    <!-- <p
+        style="
+          text-shadow: 1px #fff;
+          margin: 20px;
+          font-size: 4vw;
+          text-align: center;
+          border-radius: 50px;
+          opacity: 0.4;
+        "
+      >
+        . . . . .
+      </p> -->
+  </body>
+</html>
